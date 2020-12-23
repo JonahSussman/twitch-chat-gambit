@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twitch</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="twitch-defaults.css">
+  <link rel="stylesheet" href="twitch.css">
 </head>
-<body>
-  <h1>Testing 1, 2, 3</h1>
+
+<body class="tw-root--theme-light">
+  <div class="tw-container">
+    <nav class="tw-nav">
+      <div class="tw-nav-left">left</div>
+      <div class="tw-nav-center">center</div>
+      <div class="tw-nav-right">right</div>
+    </nav>
+    <div class="tw-side">
+      Side content goes here.
+    </div>
+    <div class="tw-channel">
+      Channel goes here.
+    </div>
+    <div class="tw-chat">
+      <div class="tw-chat-header">
+        <button>
+          <svg width="100%" height="100%" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="ScIconSVG-sc-1bgeryd-1 cMQeyU"><g><path d="M4 16V4H2v12h2zM13 15l-1.5-1.5L14 11H6V9h8l-2.5-2.5L13 5l5 5-5 5z"></path></g></svg>
+        </button>
+        <h5>Stream Chat</h5>
+        <button>
+          <svg width="100%" height="100%" version="1.1"
+          viewBox="0 0 20 20" x="0px" y="0px" class="ScIconSVG-sc-1bgeryd-1 cMQeyU">
+          <g>
+            <path fill-rule="evenodd"
+              d="M7 2a4 4 0 00-1.015 7.87c-.098.64-.651 1.13-1.318 1.13A2.667 2.667 0 002 13.667V18h2v-4.333c0-.368.298-.667.667-.667.908 0 1.732-.363 2.333-.953.601.59 1.425.953 2.333.953.369 0 .667.299.667.667V18h2v-4.333A2.667 2.667 0 009.333 11c-.667 0-1.22-.49-1.318-1.13A4.002 4.002 0 007 2zM5 6a2 2 0 104 0 2 2 0 00-4 0z"
+              clip-rule="evenodd"></path>
+            <path
+              d="M14 11.83V18h4v-3.75c0-.69-.56-1.25-1.25-1.25a.75.75 0 01-.75-.75v-.42a3.001 3.001 0 10-2 0z">
+            </path>
+          </g>
+        </svg>
+        </button>
+      </div>
+      <div class="tw-chat-gifts"></div>
+      <div class="tw-chat-list"></div>
+      <div class="tw-chat-input"></div>
+    </div>
+  </div>
 </body>
+
 </html>

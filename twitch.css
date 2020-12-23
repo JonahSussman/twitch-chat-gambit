@@ -1,0 +1,122 @@
+:root {
+  font-size: 10px;
+}
+
+body {
+  margin: 0px;
+
+  font-family: Inter,Roobert,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 1.3rem;
+}
+
+.tw-nav {
+  z-index: 1000;
+  background-color: white;
+  grid-area: nav;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  box-shadow: var(--shadow-elevation-1);
+}
+
+.tw-nav-left {
+  display: block;
+}
+
+.tw-nav-center {
+  display: block;
+}
+
+.tw-nav-right {
+  display: block;
+}
+
+.tw-side {
+  grid-area: side;
+  height: 100%;
+
+  background-color: var(--color-hinted-grey-14);
+}
+
+.tw-channel {
+  grid-area: channel
+}
+
+.tw-chat {
+  grid-area: chat;
+
+  background-color: white;
+  height: 100%;
+
+  border-left: var(--border-width-default) solid var(--color-border-base);
+
+  display: grid;
+  grid-template-rows: 50px 70px auto 93px;
+}
+
+.tw-chat-header {
+  border-bottom: var(--border-width-default) solid var(--color-border-base);
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.tw-chat-header > h5 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--font-size-6);
+  margin: auto auto;
+}
+
+.tw-chat-header > button {  
+  all: unset;
+
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5px;
+  border-radius: 2px;
+  border-radius: var(--border-radius-medium);
+}
+
+.tw-chat-header > button:hover {
+  background-color: var(--color-background-button-text-hover);
+}
+
+.tw-chat-gifts {
+  border-bottom: var(--border-width-default) solid var(--color-border-base);
+}
+
+.tw-chat-input {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.tw-container {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  overflow: hidden;
+
+  display: grid;
+
+  grid-template-rows: 5rem auto;
+  grid-template-columns: 24rem auto 34rem;
+  grid-template-areas: 
+    "nav nav nav"
+    "side channel chat";
+}
+
+body {
+  background-color: var(--color-background-body);
+}
+
