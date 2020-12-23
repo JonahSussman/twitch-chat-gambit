@@ -5,3 +5,4 @@ Ever wanted to fake twitch chat? Well now you can!
 
 - make website look actually real
 - emotes
+- Fix button css (make it more generalized)
