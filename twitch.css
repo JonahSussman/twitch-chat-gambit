@@ -15,21 +15,94 @@ body {
   grid-area: nav;
 
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "nav-left nav-right";
 
   box-shadow: var(--shadow-elevation-1);
 }
 
 .tw-nav-left {
   display: block;
+  grid-area: nav-left;
 }
 
 .tw-nav-center {
-  display: block;
+  grid-area: nav-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tw-search {
+  display: none;
+}
+
+@media(min-width: 786px) {
+  .tw-nav {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "nav-left nav-center nav-right";
+  }
+
+  .tw-search {
+    display: flex;
+
+    margin: 2px 20px;
+    padding: 5px;
+    height: 36px;
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .tw-search-input {
+    flex: 1;
+
+    background-color: var(--color-background-input);
+    appearance: none;
+    outline: none;
+    border: var(--border-width-input) solid #00000000;
+    border-bottom-left-radius: var(--border-radius-large);
+    border-top-left-radius: var(--border-radius-large);
+    padding: 5px 10px;
+    font-size: var(--font-size-5);
+    line-height: 1.5;
+
+    transition: box-shadow .1s ease-in, border .1s ease-in, background-color .1s ease-in
+  }
+
+  .tw-search-input:hover {
+    border: var(--border-width-input) solid var(--color-background-input);
+    background-color: var(--color-background-input);
+  }
+
+  .tw-search-input:focus {
+    border: var(--border-width-input) solid var(--color-border-input-focus);
+    background-color: var(--color-background-input-focus);
+  }
+
+  #tw-search-button {
+    padding: 0px 5px;
+    height: 100%;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    background-color: var(--color-background-button-secondary);
+    color: var(--color-text-button-secondary);
+  }
+
+  #tw-search-button:hover {
+    background-color: var(--color-background-button-secondary-hover);
+  }
+
+  #tw-nav-search {
+    display: none;
+  }
 }
 
 .tw-nav-right {
+  grid-area: nav-right;
   display: flex;
+  height: 50px;
+  align-items: center;
 
   margin-left: auto;
 }
