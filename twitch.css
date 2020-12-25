@@ -60,8 +60,23 @@ body {
   }
 }
 
-.tw-nav-profile {
+#tw-nav-profile {
   margin: auto 10px auto 5px;
+  border-radius: var(--border-radius-rounded);
+
+  cursor: pointer;
+}
+
+#tw-nav-online {
+  position: absolute;
+  width:  6px;
+  height: 6px;
+  top: 31px;
+  right: 9px;
+
+  border-radius: var(--border-radius-rounded);
+  border: 2px solid white;
+
 }
 
 .tw-side {
@@ -115,7 +130,6 @@ button {
   margin-top: auto;
   margin-bottom: auto;
   padding: 5px;
-  border-radius: 2px;
   border-radius: var(--border-radius-medium);
 }
 
@@ -154,3 +168,7 @@ body {
   background-color: var(--color-background-body);
 }
 
+::selection {
+  background-color: var(--color-background-accent);
+  color: var(--color-text-overlay);
+}
