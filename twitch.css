@@ -29,7 +29,39 @@ body {
 }
 
 .tw-nav-right {
-  display: block;
+  display: flex;
+
+  margin-left: auto;
+}
+
+.tw-nav-button {
+  margin: auto 5px;
+}
+
+#tw-get-bits > p {
+  display: none;
+  margin: auto;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+@media(min-width: 1200px) {
+  #tw-get-bits {
+    padding: 5px 10px 5px 8px;
+    background-color: var(--color-background-button-secondary-default);
+  }
+
+  #tw-get-bits:hover {
+    background-color: var(--color-background-button-secondary-hover);
+  }
+
+  #tw-get-bits > p {
+    display: inline;
+  }
+}
+
+.tw-nav-profile {
+  margin: auto 10px auto 5px;
 }
 
 .tw-side {
@@ -72,11 +104,13 @@ body {
   margin: auto auto;
 }
 
-.tw-chat-header > button {  
+button {  
   all: unset;
 
+  display: flex;
+  align-items: center;
+
   cursor: pointer;
-  width: 20px;
   height: 20px;
   margin-top: auto;
   margin-bottom: auto;
@@ -85,7 +119,7 @@ body {
   border-radius: var(--border-radius-medium);
 }
 
-.tw-chat-header > button:hover {
+button:hover {
   background-color: var(--color-background-button-text-hover);
 }
 
